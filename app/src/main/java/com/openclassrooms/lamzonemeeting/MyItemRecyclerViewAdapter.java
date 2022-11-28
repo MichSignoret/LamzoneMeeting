@@ -44,14 +44,14 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
+    //    public final TextView mIdView;
+    //    public final TextView mContentView;
         public PlaceholderItem mItem;
 
         public ViewHolder(FragmentMeetingBinding binding) {
             super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
+          //  mIdView = binding.itemNumber;
+          //  mContentView = binding.content;
         }
 
         @Override

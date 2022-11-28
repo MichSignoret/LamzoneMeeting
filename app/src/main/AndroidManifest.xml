@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LamzoneMeeting"
-        tools:targetApi="31">
-        tools:replace="android:appComponentFactory"
+        tools:targetApi="32">
+
         <activity
             android:name=".CreateMeeting"
             android:exported="false">

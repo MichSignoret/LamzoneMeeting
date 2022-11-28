@@ -6,6 +6,7 @@ android {
     namespace 'com.openclassrooms.lamzonemeeting'
     compileSdkVersion 32
 
+
     defaultConfig {
         applicationId "com.openclassrooms.lamzonemeeting"
         minSdk 21
@@ -14,12 +15,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
     compileOptions {
@@ -28,6 +32,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+
     }
 }
 
@@ -43,8 +48,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    implementation 'com.jakewharton:butterknife:9.0.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
 
 
