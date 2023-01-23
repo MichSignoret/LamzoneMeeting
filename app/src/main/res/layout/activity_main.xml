@@ -24,6 +24,58 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/meetingTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:hint="Date filtre"
+            android:inputType="date" />
+        <Switch
+            android:id= "@+id/switch1"
+            android:layout_width= "wrap_content"
+            android:layout_height= "wrap_content"
+            android:switchMinWidth= "56dp"
+            android:layout_marginStart="24dp"
+            android:text= ""
+            android:checked= "false"
+            android:textOff= "OFF"
+            android:textOn= "ON" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/meetingPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:hint="Lieu filtre"
+                android:inputType="text" />
+            <Switch
+                android:id= "@+id/switch2"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:switchMinWidth= "56dp"
+                android:layout_marginStart="24dp"
+                android:text= ""
+                android:checked= "false"
+                android:textOff= "OFF"
+                android:textOn= "ON" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -43,13 +95,6 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_meeting"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:src="@android:drawable/ic_input_add"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/container"
@@ -57,5 +102,12 @@
         android:layout_height="match_parent"
         app:layout_anchor="@+id/nestedScrollView"
         app:layout_anchorGravity="start|top" />"
-
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_meeting"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

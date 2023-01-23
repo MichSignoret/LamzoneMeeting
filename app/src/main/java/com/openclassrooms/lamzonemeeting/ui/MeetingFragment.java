@@ -60,6 +60,7 @@ public class MeetingFragment extends Fragment {
     }
 
     private void initList(){
+
         mMeetingList = mApiService.getMeetings();
         mRecyclerView.setAdapter(new MyMeetingRecyclerViewAdapter(mMeetingList,this.getContext()));
     }

@@ -3,6 +3,7 @@ package com.openclassrooms.lamzonemeeting.ui;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,11 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
         Meeting meeting = mMeetingList.get(position);
 
   //      holder.mListNumber.setText(position);
-        holder.mMeetingName.setText(meeting.getName());
+        holder.mMeetingName.setText(meeting.getmName()+" - " +meeting.returnStartingHour()
+                +" - " +meeting.getmPlace());
+
+        holder.mMeetingTeamMate.setText(meeting.getTeamMates());
+        holder.mMeetingTeamMate.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
 
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,10 +72,11 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.item_number)
-        public TextView mListNumber;
+
         @BindView(R.id.item_list_name)
         public TextView mMeetingName;
+        @BindView(R.id.teamMate)
+        public TextView mMeetingTeamMate;
         @BindView(R.id.item_list_delete_button)
         public ImageButton mDeleteButton;
 

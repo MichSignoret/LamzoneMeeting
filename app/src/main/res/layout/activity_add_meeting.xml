@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.AddMeetingActivity">
 
+
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -17,96 +19,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_arrow_back"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/meeting_name"
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nom" />
+                android:hint="Titre" />
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/meeting_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Lieu"/>
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date : " />
 
-        <EditText
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/meetingTextDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date" />
-        <GridLayout
-            android:id="@+id/testGridLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:columnCount="2"
-            android:rowCount="2">
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:inputType="date" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/meeting_startTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:layout_column="0"
-                android:text="Heure de début : " />
-            <TextView
-                android:id="@+id/textView6"
                 android:layout_marginTop="10dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:gravity="right"
-                android:text="Heure de fin : " />
+                android:inputType="time"
+                android:hint="Heure de début" />
 
-            <EditText
-                android:id="@+id/meetingStartTime"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:inputType="time" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/meeting_teamMates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="4"
+            android:minLines="4"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:hint="Participants"/>
 
-
-            <EditText
-                android:id="@+id/meetingEndTime"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:gravity="right"
-                android:inputType="time" />
-        </GridLayout>
-
-
-
-
-
-
-
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </LinearLayout>
 
         <Button
         android:id="@+id/add_button"
@@ -115,5 +75,8 @@
         android:text="Save"
         android:layout_gravity="center"
         tools:ignore="MissingConstraints" />
+
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,54 +1,65 @@
 package com.openclassrooms.lamzonemeeting.model;
 
-import android.text.format.Time;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Meeting {
     private long id;
-    String Name;
-    String Place;
+    String mName;
+    String mPlace;
+    Date mDateDebut;
+    String mTeamMates;
 
-
-    public Calendar getDate() {
-        return date;
+    public String getTeamMates() {
+        return mTeamMates;
     }
 
-    public void setDate(Calendar date) {
-        this.date = date;
+    public void setTeamMates(String teamMates) {
+        this.mTeamMates = teamMates;
     }
 
-    Calendar date;
-
-
-    public long getId() {
-        return id;
+    public String getmName() {
+        return mName;
     }
 
-    public String getName() {
-        return Name;
+    public void setmName(String mName) {
+        this.mName = mName;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public String getmPlace() {
+        return mPlace;
     }
 
-    public String getPlace() {
-        return Place;
+    public void setmPlace(String mPlace) {
+        this.mPlace = mPlace;
     }
 
-    public void setPlace(String place) {
-        Place = place;
+    public Date getmDateDebut() {
+        return mDateDebut;
     }
 
-    public Meeting(long id, String name, String place) {
+    public void setmDateDebut(Date mDateDebut) {
+        this.mDateDebut = mDateDebut;
+    }
+
+    public Meeting(long id, String name, String place, Date dateDebut,String teamMates) {
         this.id = id;
-        Name = name;
-        Place = place;
+        mName = name;
+        mPlace = place;
+        mDateDebut = dateDebut;
+        mTeamMates = teamMates;
     }
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String returnStartingHour(){
+        SimpleDateFormat sdf1 = new SimpleDateFormat("HH");
+        SimpleDateFormat sdf2 = new SimpleDateFormat("mm");
+        String startingHour = sdf1.format(mDateDebut)+"h"+sdf2.format(mDateDebut);
+        return startingHour;
     }
 }
