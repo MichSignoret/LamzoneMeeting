@@ -20,4 +20,9 @@ public interface MeetingApiService {
     void setFiltreSalleIsActive(Boolean filtreSalleIsActive);
     Boolean getFiltreDateIsActive();
     void setFiltreDateIsActive(Boolean filtreDateIsActive);
+
+    public void setPlaceFilter(String placeFilter);
+    public String getPlaceFilter();
+    public void setDateFilter(Date dateFilter);
+    public Date getDateFilter();
 }

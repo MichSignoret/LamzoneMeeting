@@ -35,7 +35,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/meetingTextDate"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:hint="Date filtre"
@@ -58,7 +58,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/meetingPlace"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:hint="Lieu filtre"
@@ -101,7 +101,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_anchor="@+id/nestedScrollView"
-        app:layout_anchorGravity="start|top" />"
+        app:layout_anchorGravity="start|top" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_meeting"

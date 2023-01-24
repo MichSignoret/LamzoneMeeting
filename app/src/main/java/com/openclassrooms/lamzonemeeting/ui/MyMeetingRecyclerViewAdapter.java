@@ -80,6 +80,7 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
         @BindView(R.id.item_list_delete_button)
         public ImageButton mDeleteButton;
 
+
         public ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
