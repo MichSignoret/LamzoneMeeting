@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddMeetingActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_arrow_back"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/meeting_name"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Titre" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/meeting_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lieu"/>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/meetingTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:inputType="date" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/meeting_startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:inputType="time"
+                android:hint="Heure de début" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/meeting_teamMates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="4"
+            android:minLines="4"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:hint="Participants"/>
+
+
+        <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
