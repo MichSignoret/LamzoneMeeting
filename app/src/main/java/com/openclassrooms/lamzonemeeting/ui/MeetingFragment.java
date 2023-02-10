@@ -26,7 +26,7 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.List;
 
 /**
- * A fragment representing a list of Items.
+ * Fragment pour afficher la liste des réunions
  */
 public class MeetingFragment extends Fragment {
 
