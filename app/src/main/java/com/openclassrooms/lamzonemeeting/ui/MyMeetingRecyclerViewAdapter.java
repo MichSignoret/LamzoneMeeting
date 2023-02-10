@@ -7,9 +7,11 @@ import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.button.MaterialButton;
 import com.openclassrooms.lamzonemeeting.events.DeleteMeetingEvent;
 import com.openclassrooms.lamzonemeeting.model.Meeting;
 import com.openclassrooms.lamzonemeeting.ui.placeholder.PlaceholderContent.PlaceholderItem;
@@ -55,6 +57,7 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
 
         holder.mMeetingTeamMate.setText(meeting.getTeamMates());
         holder.mMeetingTeamMate.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        holder.mRond.setColorFilter(meeting.getmColorMeeting());
 
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +82,8 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
         public TextView mMeetingTeamMate;
         @BindView(R.id.item_list_delete_button)
         public ImageButton mDeleteButton;
+        @BindView(R.id.ic_rond)
+        public ImageButton mRond;
 
 
         public ViewHolder(View view) {

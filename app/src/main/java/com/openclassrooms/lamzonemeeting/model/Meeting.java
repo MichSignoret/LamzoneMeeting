@@ -1,6 +1,8 @@
 package com.openclassrooms.lamzonemeeting.model;
 
 
+import com.openclassrooms.lamzonemeeting.service.DummyColorGenerator;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -11,6 +13,17 @@ public class Meeting {
     String mPlace;
     Date mDateDebut;
     String mTeamMates;
+
+
+    public int getmColorMeeting() {
+        return mColorMeeting;
+    }
+
+    public void setmColorMeeting(int mColorMeeting) {
+        this.mColorMeeting = mColorMeeting;
+    }
+
+    int mColorMeeting;
 
     public String getTeamMates() {
         return mTeamMates;
@@ -50,6 +63,8 @@ public class Meeting {
         mPlace = place;
         mDateDebut = dateDebut;
         mTeamMates = teamMates;
+        mColorMeeting = DummyColorGenerator.dummyColorReturn();
+
     }
 
     public void setId(long id) {
