@@ -28,6 +28,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * classe de départ de l'application
+ * affiche la liste des réunions ainsi que les filtres disponibles
+ */
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.container)
@@ -50,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        mPagerAdapter = new ListMeetingPagerAdapter(getSupportFragmentManager());
-//        mViewPager.setAdapter( mPagerAdapter);
         initView();
 
         sw1.setOnCheckedChangeListener( new CompoundButton.OnCheckedChangeListener() {

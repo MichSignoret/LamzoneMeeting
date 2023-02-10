@@ -31,6 +31,8 @@ import butterknife.OnClick;
 
 /**
  * Ajout d'une reunion
+ * à partir des données saisies sur l'interface on renseigne le nom, le lieu, la date (et l'heure), les participants
+ * pour créer une réunion lors de l'appui sur le bouton add_button
  */
 public class AddMeetingActivity extends AppCompatActivity {
 

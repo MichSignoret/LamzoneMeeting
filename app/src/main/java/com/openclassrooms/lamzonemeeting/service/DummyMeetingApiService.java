@@ -7,6 +7,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * implémentation de l'API MeetingApiService
+ * contient les méthodes de retour de la liste des réunions créées selon les filtres actifs
+ * et les méthodes d'ajout ou de suppression de réunion à la liste des réunions
+ */
 public class DummyMeetingApiService implements MeetingApiService{
     private List<Meeting> meetingsList = DummyMeetingGenerator.generateMeeting();
     Boolean filtreSalleIsActive=false;
@@ -46,6 +51,13 @@ public class DummyMeetingApiService implements MeetingApiService{
         this.filtreDateIsActive = filtreDateIsActive;
     }
 
+    /**
+     *
+     * retourne la liste des réunions selon le filtre actifs :
+     * si aucun filtre actif on retourne la liste complete
+     * si filtre place actif on retourne la liste filtrée par place rendue par la méthode filtreByPlace
+     * si filtre date actif on retourne la liste filtrée par date rendue par la méthode filtreByDate
+     */
     @Override
     public List<Meeting> getMeetings() {
         List<Meeting> resultList = new ArrayList<>();
@@ -62,17 +74,30 @@ public class DummyMeetingApiService implements MeetingApiService{
         return resultList;
     }
 
+    /**
+     *
+     * supprime meetingToDelete en paramètre de la liste des réunions
+     */
     @Override
     public void deleteMeeting(Meeting meetingToDelete) {
         meetingsList.remove(meetingToDelete);
 
     }
 
+    /**
+     *
+     * ajoute meetingToCreate en paramètre à la liste des réunions
+     */
     @Override
     public void createMeeting(Meeting meetingToCreate) {
         meetingsList.add(meetingToCreate);
     }
 
+    /**
+     *
+     * filtre la liste fournie en paramètre selon la date fournie en paramètre
+     * retounre la liste filtrée
+     */
     @Override
     public List<Meeting> filtreByDate(List<Meeting> meetingList, Date dateToApply) {
         List<Meeting> resultList = new ArrayList<>();
@@ -93,6 +118,10 @@ public class DummyMeetingApiService implements MeetingApiService{
         return resultList;
     }
 
+    /**
+     * filtre la liste fournie en paramètre selon le lieu fourni en paramètre
+     * retounre la liste filtrée
+     */
     @Override
     public List<Meeting> filtreByPlace(List<Meeting> meetingList, String placeToApply) {
 

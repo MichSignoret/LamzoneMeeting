@@ -7,6 +7,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * classe Meeting la classe reunion contient les informations d'une réunion :
+ * nom, lieu, date et heure de debut, participants et une couleur (générée en automatique aléatoirement)
+ */
 public class Meeting {
     private long id;
     String mName;
@@ -57,6 +61,14 @@ public class Meeting {
         this.mDateDebut = mDateDebut;
     }
 
+    /**
+     *
+     * id
+     * name nom de la reunion
+     * place lieu de la reunion
+     * dateDebut date et heure de la reunion
+     * teamMates participants à la reunion
+     */
     public Meeting(long id, String name, String place, Date dateDebut,String teamMates) {
         this.id = id;
         mName = name;

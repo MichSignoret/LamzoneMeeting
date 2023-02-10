@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+
 public class ListMeetingPagerAdapter extends FragmentPagerAdapter {
     public ListMeetingPagerAdapter(FragmentManager fm) {
         super(fm);

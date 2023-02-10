@@ -5,6 +5,15 @@ import com.openclassrooms.lamzonemeeting.model.Meeting;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * interface de l'api de gestions de réunions
+ * methodes :
+ * getMeeting qui retourne la liste des réunions selon le filtre actif
+ * createMeeting qui ajoute la reunion en paramètre à la liste
+ * deleteMeeting qui supprime la reunion en paramètre de la liste
+ * filtreByDate qui retourne une liste filtrée par la date fournie en paramètre
+ * filtreByPlace qui retourne une liste filtrée par lieu fourni en paramètre
+ */
 public interface MeetingApiService {
     List<Meeting> getMeetings();
     Boolean filtreSalleIsActive=false;
