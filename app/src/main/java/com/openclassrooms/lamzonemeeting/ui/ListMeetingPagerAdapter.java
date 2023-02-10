@@ -15,6 +15,7 @@ public class ListMeetingPagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
+
         return MeetingFragment.newInstance();
     }
 

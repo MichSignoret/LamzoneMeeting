@@ -29,6 +29,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * Ajout d'une reunion
+ */
 public class AddMeetingActivity extends AppCompatActivity {
 
     @BindView(R.id.meeting_name)
