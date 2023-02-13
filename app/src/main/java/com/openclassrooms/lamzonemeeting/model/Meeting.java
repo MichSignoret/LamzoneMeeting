@@ -1,6 +1,8 @@
 package com.openclassrooms.lamzonemeeting.model;
 
 
+import android.graphics.Color;
+
 import com.openclassrooms.lamzonemeeting.di.DI;
 import com.openclassrooms.lamzonemeeting.service.DummyColorGenerator;
 
@@ -76,6 +78,7 @@ public class Meeting {
         mPlace = place;
         mDateDebut = dateDebut;
         mTeamMates = teamMates;
+
 
         mColorMeeting = DummyColorGenerator.dummyColorReturn();
 
