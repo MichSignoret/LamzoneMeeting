@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import com.openclassrooms.lamzonemeeting.di.DI;
 import com.openclassrooms.lamzonemeeting.model.Meeting;
+import com.openclassrooms.lamzonemeeting.service.DummyColorGenerator;
 import com.openclassrooms.lamzonemeeting.service.DummyMeetingGenerator;
 import com.openclassrooms.lamzonemeeting.service.MeetingApiService;
 
@@ -25,6 +26,7 @@ import java.util.List;
  */
 public class MeetingServiceTest {
     private MeetingApiService service;
+
 
    @Before
    public void setup(){

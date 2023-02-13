@@ -9,7 +9,7 @@ import java.util.Random;
 /**
  * tableau de couleurs pour rendre une couleur aléatoire et l'attribuer à une reunion
  */
-public class DummyColorGenerator {
+public abstract class DummyColorGenerator {
     public static List<Integer> DUMMY_COLOR = Arrays.asList(Color.argb(255,237,217,208),
             Color.argb(255,174,206,184),
             Color.argb(255,135,186,243),

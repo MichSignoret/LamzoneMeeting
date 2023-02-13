@@ -1,5 +1,6 @@
 package com.openclassrooms.lamzonemeeting.di;
 
+import com.openclassrooms.lamzonemeeting.service.DummyColorGenerator;
 import com.openclassrooms.lamzonemeeting.service.DummyMeetingApiService;
 import com.openclassrooms.lamzonemeeting.service.MeetingApiService;
 
@@ -11,4 +12,5 @@ public class DI {
     public static MeetingApiService getNewInstanceApiService(){
         return new DummyMeetingApiService();
     }
+
 }
