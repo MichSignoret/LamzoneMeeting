@@ -15,6 +15,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.openclassrooms.lamzonemeeting.R;
 import com.openclassrooms.lamzonemeeting.di.DI;
 import com.openclassrooms.lamzonemeeting.model.Meeting;
+import com.openclassrooms.lamzonemeeting.service.DummyColorGenerator;
 import com.openclassrooms.lamzonemeeting.service.MeetingApiService;
 
 import org.w3c.dom.Text;
